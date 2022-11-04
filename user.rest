@@ -1,0 +1,41 @@
+@url = http://localhost:2000/
+
+# Get all flights
+
+GET http://localhost:2000/flight HTTP/1.1
+
+
+
+# Get single flight, put the id after flight/
+###
+GET http://localhost:2000/flight/HTTP/1.1
+
+
+# Add new flight
+
+###
+POST http://localhost:2000/flight HTTP/1.1
+Content-Type: application/json 
+
+{
+    "title": "Flight to Ghana",
+    "time": "1pm",
+    "price": "26000",
+    "date": "26-06-2022"
+}
+
+# update single flight, put the id after flight/ 
+###
+PUT  http://localhost:2000/flight/ HTTP/1.1
+Content-Type: application/json 
+
+{
+    "title": "Flight to Tokyo",
+    "time": "11pm",
+    "price": "28000",
+    "date": "23-09-2022"
+}
+
+# delete flight, put the id after flight/
+###
+DELETE http://localhost:2000/flight/ HTTP/1.1
